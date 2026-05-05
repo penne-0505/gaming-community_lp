@@ -20,6 +20,7 @@ import { joinImages, galleryImages } from "../data/lpImages";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Seo from "../components/Seo";
+import SampleSiteNotice from "../components/ui/SampleSiteNotice";
 import { getSiteDefaults, normalizeUrl } from "../utils/seo";
 import discordIcon from "../assets/icons/Discord-Symbol-White.svg";
 
@@ -1308,21 +1309,7 @@ export default function JoinLanding() {
       />
       <main>
         <Hero />
-        <section aria-label="Sample site notice" className="bg-white">
-          <div className="max-w-screen-xl mx-auto px-4 md:px-8 pb-8">
-            <div className="border-2 border-amber-300 bg-gradient-to-r from-amber-50 to-amber-100/70 text-amber-950 rounded-2xl px-6 py-5 text-sm md:text-base leading-relaxed shadow-md flex gap-3 items-start">
-              <span
-                className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-200 text-amber-900 text-sm font-bold shrink-0"
-                aria-hidden="true"
-              >
-                !
-              </span>
-              <p className="font-bold">
-                このサイトはサンプルページです。実際の取引やサービス提供は行っていません。
-              </p>
-            </div>
-          </div>
-        </section>
+        <SampleSiteNotice />
         <div className="bg-white py-10">
           <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200/80 to-transparent" />
         </div>

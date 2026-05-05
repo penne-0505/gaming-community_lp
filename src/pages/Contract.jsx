@@ -430,7 +430,8 @@ export default function Contract() {
                         <Loader2 className="animate-spin" />
                       ) : (
                         <>
-                          <span>{isPayable ? "Stripeで決済する" : "同意が必要"}</span>
+                          {/* <span>{isPayable ? "Stripeで決済する" : "同意が必要"}</span> */}
+                          <span>{isPayable ? "完了画面を見る" : "チェックで次に遷移"}</span>
                           <ArrowRight size={20} strokeWidth={3} />
                         </>
                       )}

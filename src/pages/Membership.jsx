@@ -16,6 +16,7 @@ import SupporterTicker from "../components/ui/SupporterTicker";
 import DiscordMemberListMock from "../components/ui/DiscordMemberListMock";
 import PricingComponent from "../components/ui/PricingComponent";
 import FAQItem from "../components/ui/FAQItem";
+import SampleSiteNotice from "../components/ui/SampleSiteNotice";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import { homeHeroImages } from "../data/lpImages";
@@ -379,6 +380,8 @@ const Membership = () => {
             </div>
           </motion.div>
         </section>
+
+        <SampleSiteNotice />
 
         <section className="w-full relative z-20 mb-20 overflow-hidden group">
           <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-[var(--color-bg-main)] to-transparent z-10 pointer-events-none" />
