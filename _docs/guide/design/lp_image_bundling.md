@@ -3,7 +3,7 @@ title: LP Image Bundling Guide
 status: active
 draft_status: n/a
 created_at: 2025-12-20
-updated_at: 2025-12-23
+updated_at: 2026-07-23
 references:
   - _docs/draft/lp_image_delivery_r2_transformations.md
   - _docs/draft/design_tokens.md
@@ -13,7 +13,7 @@ related_prs: []
 
 ## 概要
 - LPで使用する画像は外部URLに依存せず、ビルドに同梱して配信する。
-- 画像は `src/assets/images/landing/` と `src/assets/images/membership/` に分離し、`src/data/lpImages.js` で参照を統一する。
+- 画像は `src/assets/images/landing/` と `src/assets/images/membership/` に分離し、`src/data/lpImages.ts` で参照を統一する。
 - レスポンシブ配信は `srcset` + `sizes` を標準とし、LCPを優先する。
 
 ## ディレクトリ構成
@@ -21,7 +21,7 @@ related_prs: []
 - `src/assets/images/landing/gallery/`: JoinLanding ギャラリー用（column-1-1 〜 column-3-3）。
 - `src/assets/images/landing/bottom_cta/`: JoinLanding CTA用（left/right/overlay）。
 - `src/assets/images/membership/`: Membership ヒーロー用（hero-1〜hero-4）。
-- `src/data/lpImages.js`: 画像名・サイズ・`srcset` を一元管理するマッピング。
+- `src/data/lpImages.ts`: 画像名・サイズ・`srcset` を一元管理するマッピング。
 
 ## 命名規則
 - **Landing Hero**: `landing/hero/main.webp`, `landing/hero/sub-left.webp`, `landing/hero/sub-right.webp`
@@ -47,7 +47,7 @@ related_prs: []
 
 ## 更新手順
 1. `src/assets/images/landing/` または `src/assets/images/membership/` に画像を配置し、命名規則に合わせる。
-2. `src/data/lpImages.js` を更新して `src` / `width` / `height` / `srcset` を登録する。
+2. `src/data/lpImages.ts` を更新して `src` / `width` / `height` / `srcset` を登録する。
 3. 必要に応じて `-640/-1024/-1600` を追加し、`srcset` を拡張する。
 4. `Join` / `Membership` の参照を更新し、表示確認を行う。
 
