@@ -289,7 +289,8 @@ const Membership = () => {
                   height={heroImages[currentImageIndex].height}
                   loading={currentImageIndex === 0 ? "eager" : "lazy"}
                   decoding="async"
-                  fetchPriority={currentImageIndex === 0 ? "high" : "auto"}
+                  // @ts-expect-error React 18 drops camelCase fetchPriority on img; HTML attr form preserves the LCP hint
+                  fetchpriority={currentImageIndex === 0 ? "high" : "auto"}
                   alt=""
                   aria-hidden="true"
                   className="absolute inset-0 w-full h-full object-cover"
